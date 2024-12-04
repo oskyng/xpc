@@ -1,0 +1,21 @@
+package cl.faceledev.xpc.domain;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
+@Table(name = "sid")
+public class SID {
+    @Id
+    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "descripcion", nullable = false)
+    private String descripcion;
+}
